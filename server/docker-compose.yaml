@@ -10,7 +10,9 @@ services:
       - todo-data:/data/db
 
   backend:
-    image: todo-app
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: todo-server
     depends_on:
       - mongodb
