@@ -19,5 +19,5 @@ services:
     environment:
       DATABASE_URI: 'mongodb://mongo:27017/todo-db'
 
-  volumes:
-    todo-data:
+volumes:
+  todo-data:
