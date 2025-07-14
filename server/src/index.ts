@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/health', (req: Request, res: Response) => {
-  res.status(200).json({ message: 'Healthy Server' });
+  res.status(200).json({ message: 'Ok' });
 });
 
 app.get('/users', async (req: Request, res: Response) => {
@@ -24,5 +24,5 @@ app.post('/users', async (req: Request, res: Response) => {
 
 app.listen(3000, async () => {
   await connectDB();
-  console.log('Server started....');
+  console.log('Server running...');
 });
