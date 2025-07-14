@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://mongo:27017/todo-db');
+    await mongoose.connect(process.env.DATABASE_URI!);
     console.log('MongoDB connected!');
   } catch (error) {
     console.log('Failed to connect to db', error);
