@@ -20,6 +20,10 @@ services:
       - '3000:3000'
     environment:
       DATABASE_URI: 'mongodb://mongodb:27017/todo-db'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev
 
 volumes:
   todo-data:
